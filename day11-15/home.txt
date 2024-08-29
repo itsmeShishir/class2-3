@@ -1,0 +1,2 @@
+make a navbar with flex and postion 
+need to be look good

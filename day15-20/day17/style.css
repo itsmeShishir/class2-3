@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.title{
+    color: red;
+    margin: 40px 0px;
+}
+.allCards{
+    display: grid;
+    gap:10px;
+    grid-template-columns:  repeat(3, 1fr);
+}
+.card{
+    width: 350px;
+}
+.card h2{
+    font-size: 25px;
+    margin: 8px 0px;
+    font-weight: 500;
+}
+.card p{
+    width: 299px;
+    font-size: 16px;
+    margin: 8px 0px;
+    text-align: justify;
+    font-weight: 500;
+}
+.desc{
+    width: 320px;
+}
+@media (max-width: 500px) {
+    .allCards{
+    grid-template-columns:  repeat(1, 3fr);
+}
+    
+}
+@media (min-width: 1200px) {
+    .container{
+    width: 82%;
+    margin: 0 auto;
+}
+
+}
