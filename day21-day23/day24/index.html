@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btninc" onclick="inc()">click +</button>
+    <p id="data"></p>
+    <button id="btndec" onclick="dec()">click -</button>
+    <button id="btnres" onclick="res()">Reset to 0</button>
+    
+    <script>
+        let a = document.getElementById("data");
+        let b = document.getElementById("btninc");
+        let c = document.getElementById("btndec");
+        let d = 0;
+        a.innerHTML = d;
+
+        function inc(){
+            if (d < 10){
+                d++;
+                a.innerHTML = d;
+            }
+            else{
+                alert("sorry canot go more than 10")
+            }
+            
+        }
+        function dec(){
+            if (d > 0){
+                d--;
+                a.innerHTML = d;
+            }
+            else{
+                alert("sorry canot go less than 0")
+            }
+        }
+        function res(){
+            d = 0
+            a.innerHTML = d;
+        }
+    </script>
+</body>
+</html>
