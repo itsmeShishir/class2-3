@@ -1,6 +1,7 @@
 import {useState, useEffect} from "react";
 import "./app.css";
 import axios from "axios"
+import Forms from "./form";
 
 //npm i axios
 
@@ -40,6 +41,7 @@ const App = () => {
   // const yourName = "shishir";
   return (
     <div>
+      <Forms />
       <button onClick={()=> setData(data+1)}>Add +</button>
       <p>{data}</p>
       <button onClick={()=> setData(data-1)}>Sub -</button>
