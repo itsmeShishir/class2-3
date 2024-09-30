@@ -8,6 +8,9 @@ import Register from "./pages/auth/Register"
 import Headers from "./component/header"
 import ErrorPage from "./pages/client/error"
 import SingleProductPage from "./pages/client/snigleproduct"
+import Dashboard from "./pages/admin/Dashboard"
+import MainDashboard from "./pages/admin/mainDashboard"
+import AllProductsAdmin from "./pages/admin/AllProductsAdmin"
 const App = () => {
   return (
     <>
@@ -20,6 +23,11 @@ const App = () => {
       <Route path="/contact" element={<ContactUs />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/admin" element={<Dashboard />}> 
+          <Route index element={<MainDashboard />} />
+          <Route path="allProductAdmin" element={<AllProductsAdmin />} />
+          <Route path="login" element={<LoginPage />} />
+      </Route>
       <Route path="*" element={<ErrorPage />} />
     </Routes>
     </>
