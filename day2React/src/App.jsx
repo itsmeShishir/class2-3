@@ -11,6 +11,7 @@ import SingleProductPage from "./pages/client/snigleproduct"
 import Dashboard from "./pages/admin/Dashboard"
 import MainDashboard from "./pages/admin/mainDashboard"
 import AllProductsAdmin from "./pages/admin/AllProductsAdmin"
+import BlogPage from "./pages/client/blog"
 const App = () => {
   return (
     <>
@@ -18,6 +19,7 @@ const App = () => {
     <Routes>
       <Route path="/" element= {<HomePage />} />
       <Route path="/product" element={<ProductPage />} />
+      <Route path="/blogs" element={<BlogPage />} />
       <Route path="/singleproduct/:id" element={< SingleProductPage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/contact" element={<ContactUs />} />

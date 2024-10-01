@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from 'react-router-dom';
 const LoginPage = () => {
     const [email, SetEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
@@ -26,7 +27,8 @@ const LoginPage = () => {
   return (
     <div className='container mx-auto flex items-center justify-center h-[100vh]'>
         <ToastContainer />
-      <form onSubmit={handleSubmit} className='w-[400px] '>
+      <div>
+        <form onSubmit={handleSubmit} className='w-[400px] '>
         <div className='flex flex-col my-2'>
            <label htmlFor='email'>Email</label>
           <input type="email" placeholder='email' name='email' 
@@ -43,7 +45,9 @@ const LoginPage = () => {
 
         </div>
       </form>
+      <Link to={"/register"} className='block my-3 text-center'> Does not have an acount Register</Link>
     </div>
+      </div>
   )
 }
 
